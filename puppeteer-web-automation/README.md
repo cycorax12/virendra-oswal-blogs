@@ -1,0 +1,1 @@
+Just ```npm install``` and run node ```index.js```
