@@ -8,12 +8,6 @@ const scrapeWebpage = async () => {
     });
     const page = await browser.newPage()
 
-
-
-
-    //await page.authenticate({ username, password });
-
-
     // visit page
     const url = 'http://automationpractice.com/index.php';
     await page.goto(`${url}`)
@@ -34,9 +28,7 @@ const scrapeWebpage = async () => {
             })
 
         }
-
         return names
-
     });
 
     // print extracted product names and its price.
