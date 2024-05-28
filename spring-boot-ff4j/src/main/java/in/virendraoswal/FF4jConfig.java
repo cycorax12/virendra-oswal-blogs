@@ -24,12 +24,12 @@ public class FF4jConfig {
 	public FF4j ff4j() {
 		FF4j ff4j = new FF4j();
 
-		FlippingStrategy strategy = new ReleaseDateFlipStrategy("2024-05-28-14:26");
-		Feature helloFeature = new Feature(RELEASE_FEATURE);
-		helloFeature.setEnable(true);
-		helloFeature.setFlippingStrategy(strategy);
+		FlippingStrategy releaseDateStrategy = new ReleaseDateFlipStrategy("2024-05-28-14:26");
+		Feature releaseFeature = new Feature(RELEASE_FEATURE);
+		releaseFeature.setEnable(true);
+		releaseFeature.setFlippingStrategy(releaseDateStrategy);
 
-		ff4j.createFeature(helloFeature);
+		ff4j.createFeature(releaseFeature);
 
 		Feature scaleFeature = new Feature(SCALE_FEATURE);
 		FlippingStrategy officeStrategy = new OfficeHourStrategy();
